@@ -137,5 +137,5 @@ if bundles_installed == 0
   echo ""
   :BundleInstall
 endif
-filetype plugin indent on
 set nocompatible
+filetype plugin indent on
