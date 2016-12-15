@@ -8,6 +8,20 @@ shopt -s checkwinsize
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias ll='ls -lah'
+alias cp='cp -i'
+alias rm='rm -i'
+alias ssh='ssh -A'
+alias dt="find . -type f -name '*~' -exec rm -f '{}' \;;find . -type f -name '*.pyo' -exec rm -f '{}' \;;find . -type f -name '*.pyc' -exec rm -f '{}' \;;";
+alias start-nginx='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias stop-nginx='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias stop-sidekiq='launchctl unload ~/Library/LaunchAgents/mc-jobs-1.plist'
+alias start-sidekiq='launchctl load ~/Library/LaunchAgents/mc-jobs-1.plist'
+alias staging='ubuntu@appstaging.masteryconnect.com'
+alias teamparmer='ubuntu@mc-teamparmer.mstry.io'
+alias fle="perl -pi -e 's/\r\n?/\n/g' "
+alias jenn="cd /Users/mike/Projects/mc_team_jenn"
+alias railss="rails s -b0.0.0.0"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -33,3 +47,19 @@ export PATH="/opt/texbin:$PATH"
 export GOPATH="$HOME/.go"
 
 source $DOTFILES/bash/setup.sh
+
+
+export PATH=$PATH:/opt/local/bin
+export CLICOLOR=1
+#export LSCOLORS="Dxgxcxdxbxegedabagacad"
+export LSCOLORS="Dxgxcxdxcxegedabagacad"
+PS1='[\u@\h \W]\$ '
+source ~/git-completion.bash
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/michaelparmer/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export ACCESS_KEY_ID="AKIAI5BCALOVSEYTNX4A"
+export aws_access_key_id="AKIAI5BCALOVSEYTNX4A"
+export SECRET_ACCESS_KEY="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"
+export aws_secret_access_key="d33YGl5ACqOovaOnwbZuirDFg7XpmNjNL41kzNFi"

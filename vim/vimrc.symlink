@@ -13,3 +13,4 @@ runtime! settings/**.vim
 " Machine-local vim settings - keep this at the end
 " --------------------------
 silent! source ~/.vimrc.local
+set nonumber

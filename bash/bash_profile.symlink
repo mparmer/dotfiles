@@ -21,4 +21,5 @@ export PATH=~/pebble-dev/PebbleSDK-2.0-BETA6/bin:$PATH
 export DOCKER_HOST=tcp://:4242
 
 # for go
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/Projects/go
+export PATH="$PATH:$GOPATH/bin"

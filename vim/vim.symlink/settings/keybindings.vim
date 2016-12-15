@@ -48,10 +48,10 @@ endif
 map <Esc>[B <Down>
 
 " So we can use the arrow keys but still act like regular vim
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+"imap <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
 nmap <up> gk
 nmap <down> gj
 nmap <left> h

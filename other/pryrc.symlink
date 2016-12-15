@@ -56,3 +56,10 @@ Pry.config.hooks.add_hook(:when_started, :say_hi) { puts "\n\nWelcome to Pry!\n\
 Pry.config.hooks.add_hook(:after_session, :say_bye) { puts "\nHave a nice day! :)\n\n"}
 
 Pry.config.commands.import(default_command_set)
+
+if defined?(PryByebug)
+  Pry.commands.alias_command 'c', 'continue'
+  Pry.commands.alias_command 's', 'step'
+  Pry.commands.alias_command 'n', 'next'
+  Pry.commands.alias_command 'f', 'finish'
+end

@@ -34,8 +34,6 @@ alias cls='clear'
 alias edit="$EDITOR"
 alias pager="$PAGER"
 
-alias q='exit'
-
 alias irc="$IRC_CLIENT"
 
 alias rb='ruby'
@@ -50,6 +48,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+alias dt="find . -type f -name '*~' -exec rm -f '{}' \;;find . -type f -name '*.pyo' -exec rm -f '{}' \;;find . -type f -name '*.pyc' -exec rm -f '{}' \;;";
 
 # Shell History
 alias h='history'
