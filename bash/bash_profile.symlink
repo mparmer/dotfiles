@@ -18,8 +18,17 @@ source $DOTFILES/bash/setup.sh
 
 export PATH=~/pebble-dev/PebbleSDK-2.0-BETA6/bin:$PATH
 
-export DOCKER_HOST=tcp://:4242
-
 # for go
 export GOPATH=$HOME/Projects/go
 export PATH="$PATH:$GOPATH/bin"
+LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
+
+alias ll='ls -lah'
+alias cp='cp -i'
+alias rm='rm -i'
+alias ssh='ssh -A'
+alias dt="find . -type f -name '*~' -exec rm -f '{}' \;;find . -type f -name '*.pyo' -exec rm -f '{}' \;;find . -type f -name '*.pyc' -exec rm -f '{}' \;;";
+alias fle="perl -pi -e 's/\r\n?/\n/g' "
+alias railss="rails s -b0.0.0.0"
+alias dc="docker-compose"
+eval "$(direnv hook bash)"

@@ -17,11 +17,9 @@ alias start-nginx='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.ngin
 alias stop-nginx='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
 alias stop-sidekiq='launchctl unload ~/Library/LaunchAgents/mc-jobs-1.plist'
 alias start-sidekiq='launchctl load ~/Library/LaunchAgents/mc-jobs-1.plist'
-alias staging='ubuntu@appstaging.masteryconnect.com'
-alias teamparmer='ubuntu@mc-teamparmer.mstry.io'
 alias fle="perl -pi -e 's/\r\n?/\n/g' "
-alias jenn="cd /Users/mike/Projects/mc_team_jenn"
 alias railss="rails s -b0.0.0.0"
+alias dc="docker-compose"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -52,12 +50,12 @@ source $DOTFILES/bash/setup.sh
 export PATH=$PATH:/opt/local/bin
 export CLICOLOR=1
 #export LSCOLORS="Dxgxcxdxbxegedabagacad"
-export LSCOLORS="Dxgxcxdxcxegedabagacad"
+LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 PS1='[\u@\h \W]\$ '
 source ~/git-completion.bash
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export NVM_DIR="/Users/michaelparmer/.nvm"
+export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export ACCESS_KEY_ID="AKIAI5BCALOVSEYTNX4A"
 export aws_access_key_id="AKIAI5BCALOVSEYTNX4A"

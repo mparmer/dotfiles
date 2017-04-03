@@ -1,11 +1,12 @@
 set -g default-terminal "screen-256color"
 
-# This makes pbcopy/pbpaste work in tmux 
+# This makes pbcopy/pbpaste work in tmux
 set-option -g default-command "which reattach-to-user-namespace >/dev/null && reattach-to-user-namespace -l bash || bash"
 
-set-option -g prefix C-f
+set-option -g prefix C-a
+set -g prefix C-a
 unbind-key C-b
-bind-key a send-prefix
+bind-key C-a send-prefix
 
 # Start numbering windows at 1
 set -g base-index 1

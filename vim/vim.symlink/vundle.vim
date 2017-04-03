@@ -65,7 +65,6 @@ Bundle 'nanotech/jellybeans.vim'
 
 " ===================== UI ========================
 Bundle 'bling/vim-airline'
-let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 0
 let g:airline_enable_syntastic  = 1
 let g:airline#extensions#whitespace#enabled = 0
